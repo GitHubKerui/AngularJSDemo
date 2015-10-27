@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularDemo</title>
+    <script src="resources/angular/angular.js"></script>
+</head>
+<body ng-app="myapp">
+<div ng-controller="HelloController" >
+    <h2>Welcome {{helloTo.title}} to the world of Yiibai!</h2>
+    <h3>{{ someBody.name }} say : hello!</h3>
+    <a href="jsp/demo1.html">测试1</a>
+</div>
+
+
+<script>
+    angular.module("myapp", [])
+
+            .controller("HelloController", function($scope) {
+                $scope.helloTo = {};
+                $scope.helloTo.title = "china";
+
+                $scope.someBody={};
+                $scope.someBody.name='小明';
+
+            });
+
+
+
+</script>
+</body>
+</html>
